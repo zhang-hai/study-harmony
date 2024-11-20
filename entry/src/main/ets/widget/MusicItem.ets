@@ -1,0 +1,57 @@
+/**
+ * 音乐item组件
+ */
+@Component
+export struct MusicItem{
+  build() {
+    Column(){
+      Stack({alignContent:Alignment.Bottom}){
+        Image($r('app.media.ic_music_bg'))
+          .width('100%')
+          .borderRadius({topLeft:15,topRight:15})
+        Row(){
+          Image($r('app.media.headphones_fill'))
+            .width(20)
+            .fillColor(Color.White)
+          Text('288万').fontColor(Color.White).margin({left:6})
+          Image($r('app.media.doc_plaintext'))
+            .width(20)
+            .fillColor(Color.White)
+            .margin({left:20})
+          Text('288万')
+            .fontColor(Color.White)
+            .margin({left:6})
+          // 占位组件
+          Blank()
+          Text('4:33')
+            .fontColor(Color.White)
+        }
+        .padding({left:5,right:5,bottom:10})
+        .width('100%')
+      }
+      Column(){
+        Text('【凤凰传奇新歌】欢迎来到国风统治区：唢呐一响神曲《铁衣流派推广曲》巴拉巴拉巴坎布卡卡')
+          .fontSize(16)
+          .textOverflow({overflow:TextOverflow.Ellipsis})
+          .maxLines(2)
+        Row(){
+          Text('19万点赞')
+            .fontColor('#dv886c')
+            .padding(5)
+            .backgroundColor('#fef3f3')
+          Image($r('app.media.dot_grid_1x2'))
+            .width(20)
+            .fillColor('#bcbcbc')
+        }
+        .width('100%')
+        .margin({top:15})
+        .justifyContent(FlexAlign.SpaceBetween)
+      }
+      .backgroundColor(Color.White)
+      .padding({left:10,right:10,top:10,bottom:10})
+      .borderRadius({bottomLeft:15,bottomRight:15})
+    }
+    .width('100%')
+    .padding(5)
+  }
+}
